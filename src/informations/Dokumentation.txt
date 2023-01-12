@@ -1,0 +1,31 @@
+at first you have to install node and visual-studio-code editor
+and angular
+
+npm install -g @angular/cli
+
+a.) see your version 
+    node --version
+    ng --version
+
+
+1. Create your project i create an folder on D:
+with mkdir A_Angular_Kurs
+
+D:\A_Angular_Kurs>ng new Ang-Crud-Material-Json
+   we want to use Routing = Yes and use CSS
+
+with cd change into your folder you create your new project
+type code .        to start it in visual studio code
+
+D:\A_Angular_Kurs\Ang-Crud-Material-Json>code .
+
+Install bootstrap:    npm install --save bootstrap
+
+Install angualr/material:   ng add @angular/material
+
+now you can start your project
+
+open a new terminal in VS :   ng serve
+now you get your url: localhost:4200 and open it in
+your browser:
+
