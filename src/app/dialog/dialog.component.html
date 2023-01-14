@@ -4,13 +4,13 @@
 <form [formGroup]="productForm">
   <div mat-dialog-content>
     <mat-form-field appearance="outline">
-      <mat-label>First-Name</mat-label>
-      <input matInput placeholder="Firstname" />
+      <mat-label>Product-Name</mat-label>
+      <input formControlname= "productName" name="productName" matInput placeholder="Name" />
     </mat-form-field>
 
     <mat-form-field appearance="fill">
       <mat-label>Categories</mat-label>
-      <mat-select placeholder="Category">
+      <mat-select formControlname= "category" name="category" placeholder="Category">
         <mat-option value="Fruits">Fruits</mat-option>
         <mat-option value="Vegetables">Vegetables</mat-option>
         <mat-option value="Electronics">Electronics</mat-option>
@@ -19,7 +19,7 @@
 
     <mat-form-field appearance="outline">
       <mat-label>Choose a date</mat-label>
-      <input matInput [matDatepicker]="picker" />
+      <input formControlname= "date" name="date" matInput [matDatepicker]="picker" />
       <mat-datepicker-toggle
         matIconSuffix
         [for]="picker"
@@ -28,7 +28,7 @@
     </mat-form-field>
 
     <label for=""><h1>Product Freshness</h1></label>
-    <mat-radio-group aria-label="Select an option">
+    <mat-radio-group formControlname= "freshness" aria-label="Select an option">
       <mat-radio-button *ngFor="let fresh of freshnesslist" [value]="fresh">{{
         fresh
       }}</mat-radio-button>
@@ -36,22 +36,18 @@
 
     <mat-form-field appearance="outline">
       <mat-label>Price</mat-label>
-      <input matInput type="number" step="0.50" placeholder="price" />
+      <input formControlname= "price" matInput type="number" step="0.50" placeholder="price" />
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Comment</mat-label>
-      <textarea matInput></textarea>
+      <textarea formControlname= "comment" matInput></textarea>
     </mat-form-field>
   </div>
 </form>
 
 <div class="example-button-row">
-  <button mat-raised-button style="margin-left: 10px" color="warn">
-    Close
-  </button>
-  <button mat-raised-button style="margin-left: 8px" color="primary">
-    Save
-  </button>
+  <button mat-raised-button style="margin-left: 10px" color="warn">Close</button>
+  <button mat-raised-button style="margin-left: 8px" color="primary" (click)="addProduct()">Save</button>
   <!-- <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a> -->
 </div>

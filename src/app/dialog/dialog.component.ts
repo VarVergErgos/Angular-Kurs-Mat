@@ -7,9 +7,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.css'],
 })
-export class DialogComponent {
+export class DialogComponent  implements OnInit{
   freshnesslist = ['Brand New', 'Second Hand', 'Refurbished'];
-  productForm !:FormGroup
+  productForm!: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {}
 
@@ -17,11 +17,13 @@ export class DialogComponent {
     this.productForm = this.formBuilder.group({
       productName: ['', Validators.required],
       freshness: ['', Validators.required],
-      price: ['', Validators.required ],
+      price: ['', Validators.required],
       comment: ['', Validators.required],
       date: ['', Validators.required],
-    });
+    })
+  }
 
-
+  addProduct() {
+    console.log(this.productForm.value);
   }
 }

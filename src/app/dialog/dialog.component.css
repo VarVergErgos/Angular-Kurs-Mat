@@ -3,9 +3,6 @@ mat-form-field{
       
 }
 
-.mat-dialog-content{
-
-}
 .mat-mdc-radio-button ~ .mat-mdc-radio-button {
   margin-left: 16px;
 }
