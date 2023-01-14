@@ -4,7 +4,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
- 
+import { HttpClientModule } from '@angular/common/http';
+
+
 /** MATERIAL DESIGN */
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon'; 
@@ -17,6 +19,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker'; 
 import { MatNativeDateModule} from '@angular/material/core'
 import { MatRadioModule } from '@angular/material/radio'; 
+
 
 
 
@@ -37,7 +40,8 @@ import { MatRadioModule } from '@angular/material/radio';
     MatNativeDateModule,
     MatRadioModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
